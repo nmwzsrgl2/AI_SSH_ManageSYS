@@ -1,6 +1,7 @@
 # 智能运维管理系统
 
 一个基于本地 AI 的安全运维管理平台，集服务器监控、网络设备巡检和智能问题分析于一体。
+
 <img width="2555" height="1245" alt="image" src="https://github.com/user-attachments/assets/b8e52cda-782a-4c51-bd87-7afbe089581b" />
 
 
@@ -8,9 +9,9 @@
 
 - **远程控制**：WebSocket + SSH 加密连接主机，MCP 限制命令执行，仅查看日志、配置和系统状态。
 - **智能助手**：
-  - 本地微调 AI 模型 + 知识库
+  - 支持本地微调 AI 模型 Ollama
   - AI 对话框实时交互，提供巡检分析和问题解答
-  - Dify AI Agent 根据对话内容自动选择 LLM 或 Agent
+  - Dify AI Agent 工作流对话
 - **前端仪表盘**：
   - 本机性能监控（CPU、内存、硬盘）
   - 服务器日志查看
