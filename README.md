@@ -39,9 +39,9 @@
 
 ## 部署步骤
 
-1. 配置本地微调 AI 模型并接入知识库
+1. 配置并部署 Dify 平台配置Agent
 2. 安装 Flask 和依赖，初始化 SQLite 数据库
-3. 部署 MCP 并设置命令权限
+3. 部署 fastmcp 
 4. 部署前端仪表盘，连接后端和 Zabbix API
 5. 启动 Flask 后端服务，确保 Session 认证生效
 6. 启动 WebSocket 服务，实现远程 SSH 控制
