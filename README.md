@@ -1,6 +1,8 @@
 # 智能运维管理系统
 
 一个基于本地 AI 的安全运维管理平台，集服务器监控、网络设备巡检和智能问题分析于一体。
+<img width="2555" height="1245" alt="image" src="https://github.com/user-attachments/assets/b8e52cda-782a-4c51-bd87-7afbe089581b" />
+
 
 ## 功能
 
