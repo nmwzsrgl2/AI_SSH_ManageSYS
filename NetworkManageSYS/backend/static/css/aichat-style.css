@@ -1,0 +1,538 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+} */
+
+.chat-container {
+    width: 100%;
+    max-width: 900px;
+    height: 95vh;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #3696f0;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.model-selector {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.model-selector select {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-clear {
+    padding: 8px 15px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s;
+}
+
+.btn-clear:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    display: flex;
+    gap: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message.user {
+    flex-direction: row-reverse;
+}
+.ai {
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.user .avatar {
+    background: url(../images/users.png);
+    background-size: 38px;
+    background-repeat: no-repeat;
+    color: white;
+    border: 1px solid black;
+}
+
+.ai .avatar {
+    background: url(../images/Ai.png);
+    background-size: 38px;
+    background-repeat: no-repeat;
+    color: white;
+    border: 1px solid black;
+}
+
+.message-content {
+    max-width: 80%;
+    padding: 18px;
+    border-radius: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.user .message-content {
+    background: white;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-bottom-right-radius: 5px;
+}
+
+.ai .message-content {
+    background: white;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-bottom-left-radius: 5px;
+    flex-direction: column;
+}
+
+.message-content pre {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.message-content code {
+    /* font-family: 'Courier New', monospace; */
+    font-size: 0.9em;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.chat-input-area {
+    border-top: 1px solid #e0e0e0;
+    padding: 20px;
+    background: white;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-container textarea:focus {
+    border-color: #667eea;
+}
+
+.input-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-send {
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #667eea, #0a8fe2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* gap: 8px; */
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+.btn-stop {
+    padding: 10px 25px;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #ff0000, #ff3300);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* gap: 8px; */
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.btn-ssh {
+    padding: 10px 25px;
+    margin-right: 10px;
+    font-size: 13px;
+    background: linear-gradient(135deg, #34c527, #2cbe00);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* gap: 8px; */
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.btn-send:hover {
+    transform: translateY(-2px);
+}
+.btn-stop:hover {
+    transform: translateY(-2px);
+}
+.btn-send:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+.btn-stop:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.typing-indicator.active {
+    opacity: 1;
+}
+
+.input-hints {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* 滚动条样式 */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 95vh;
+        border-radius: 10px;
+    }
+    
+    .chat-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .message-content {
+        max-width: 85%;
+    }
+}
+
+/* 旋转加载动画 */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(76, 175, 80, 0.2);
+    border-top-color: #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 流式打字效果 */
+.content-text.typing-cursor::after {
+    content: '▋';
+    animation: blink 1s infinite;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-left: 2px;
+    font-size: 1.2em;
+    vertical-align: text-bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* 流式内容样式 */
+.content-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+/* 流式内容中的代码 */
+.content-text code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #d63384;
+}
+
+.content-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* 打字完成提示 */
+.typing-complete {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-left: 8px;
+    animation: fadeIn 0.5s ease;
+}
+
+.typing-stopped {
+    color: #ff9800;
+    font-size: 0.85em;
+    margin-left: 8px;
+    font-style: italic;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 流式响应时的消息样式 */
+.message.ai.streaming .message-content {
+    border-color: #4CAF50;
+    background: linear-gradient(to right, white, #f8fff8);
+}
+
+/* 预格式文本样式 */
+pre {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    border-left: 4px solid #4CAF50;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 1em;
+}
+
+/* 对话框样式（保持不变） */
+.confirm-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ... 其他样式保持不变 ... */
+
+/* 加载状态优化 */
+.btn-send:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.fa-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 输入框优化 */
+.input-container textarea {
+    font-family: inherit;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.input-container textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .content-text.typing-cursor::after {
+        font-size: 1em;
+    }
+    
+    .content-text {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    
+    pre {
+        font-size: 0.85em;
+        padding: 12px;
+    }
+}
+
+/* 错误消息样式 */
+.message.error .avatar {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e) !important;
+}
+
+.message.error .message-content {
+    background: #fff5f5 !important;
+    border: 1px solid #ffcccc !important;
+    color: #d63031 !important;
+}
+/* 成功的消息样式 */
+.message.success .avatar {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A) !important;
+}
+
+.message.success .message-content {
+    background: #e8f5e9 !important;
+    border: 1px solid #c8e6c9 !important;
+    color: #2e7d32 !important;
+}
+.success,.error{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#AiThinking{
+    max-width: 100%;
+    padding: 3%;
+}
+.Thinking{
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+.ThinkingButton{
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.ThinkingButton:hover{
+    color: #49bd1b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+}

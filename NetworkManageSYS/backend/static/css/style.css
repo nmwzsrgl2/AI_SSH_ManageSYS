@@ -1,0 +1,888 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header > h1{
+    min-width: 218px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* 顶部导航栏 */
+
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.5rem;
+    min-width: 580px;
+    justify-content: flex-end;
+}
+
+
+/* 主容器 */
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 64px);
+}
+
+
+/* 左侧连接列表栏 */
+
+.sidebar {
+    width: 300px;
+    background: white;
+    border-right: 1px solid #e1e8ed;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+}
+
+.AI-chat.collapsed {
+    width: 0px;
+    display: none;
+}
+.collapsed{
+    width: 0px;
+}
+.sidebar-header {
+    padding: 20px 20px;
+    border-bottom: 1px solid #e1e8ed;
+    background: #f8f9fa;
+}
+
+.sidebar-header h3 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.connections-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+}
+
+.connection-item {
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.connection-item:hover {
+    background: #f8f9fa;
+    border-left-color: #3498db;
+}
+
+.connection-item.active {
+    background: #e3f2fd;
+    border-left-color: #2196f3;
+}
+
+.connection-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.connection-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.connection-details {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+}
+
+.connection-status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #95a5a6;
+    margin-left: auto;
+    margin-top: 0.2rem;
+}
+
+.connection-status-indicator.connected {
+    background: #27ae60;
+}
+
+.empty-connections {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.empty-connections .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+
+/* 中间终端区域 */
+
+.terminal-container {
+    width: 1000px;
+    min-width: 700px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    overflow: auto;
+}
+
+.terminal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.terminal-title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.connection-status {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-connected {
+    background: #d5f4e6;
+    color: #27ae60;
+}
+
+.status-disconnected {
+    background: #fadbd8;
+    color: #e74c3c;
+}
+
+.status-connecting {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.terminal-content {
+    flex: 1;
+    position: relative;
+    background: #000000;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+#terminal {
+    width: 99%;
+    height: 95%;
+    background: #000000;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.drag-handle {
+    width: 3px;
+    height: 100%;
+    background: #333;
+    cursor: col-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+    opacity: 0;
+}
+.drag-handle:hover {
+    background: #00a6ff;
+    opacity: 0.9;
+}
+/* 右边AI聊天栏 */
+.AI-chat{
+    width: 450px;
+    max-width: 650px;
+    min-width: 504px;
+    display: flex;
+    height: calc(100vh - 64px);
+    flex-direction: column;
+    background: white;
+    transition: width 0.3s ease;
+}
+/* 按钮样式 */
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #219a52;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #e00b24;
+}
+
+.btn-outline {
+    background: #3498db;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: #6089b3;
+}
+
+.btn-test {
+    background: #f39c12;
+    color: white;
+}
+
+.btn-test:hover {
+    background: #e67e22;
+}
+
+
+/* 新建连接表单模态框 */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.close-btn:hover {
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group.port-group {
+    min-width: 120px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.required {
+    color: #e74c3c;
+    margin-right: 0.2rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-error {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+
+/* 端口输入组件 */
+
+.port-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.port-btn {
+    background: #f8f9fa;
+    border: none;
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #666;
+    transition: background-color 0.2s ease;
+    min-width: 40px;
+}
+
+.port-btn:hover {
+    background: #e9ecef;
+}
+
+.port-input-container input {
+    border: none;
+    text-align: center;
+    margin: 0;
+    padding: 0.75rem 0.5rem;
+    width: 60px;
+    min-width: 60px;
+}
+
+.port-input-container input:focus {
+    box-shadow: none;
+}
+
+
+/* 认证方式单选按钮 */
+
+.auth-options {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+    color: #555;
+    transition: color 0.2s ease;
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.radio-option:hover {
+    color: #3498db;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    position: relative;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.radio-option:hover .radio-custom {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.radio-option input[type="radio"]:checked+.radio-custom {
+    border-color: #3498db;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.radio-option input[type="radio"]:checked+.radio-custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.radio-option input[type="radio"]:checked+.radio-custom+span {
+    color: #3498db;
+    font-weight: 500;
+}
+
+
+/* 密码输入组件 */
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* .password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+.password-toggle:hover {
+    color: #333;
+} */
+
+.eye-icon {
+    display: block;
+}
+
+
+/* 安全提示 */
+
+.security-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border-left: 3px solid #3498db;
+    margin: 1rem 0;
+}
+
+.notice-icon {
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+}
+
+.notice-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.auth-method textarea {
+    height: 100px;
+    font-family: monospace;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* 响应式设计 */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 280px;
+    }
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+
+/* 滚动条样式 */
+
+.connections-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.connections-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.connections-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.connections-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+
+/* ========== 用户认证相关样式 ========== */
+
+
+/* 头部导航用户界面 */
+
+.user-actions,
+.auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.welcome-text {
+    color: #ecf0f1;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.welcome-text span {
+    color: #3498db;
+    font-weight: 600;
+}
+
+
+/* 登录注册表单样式 */
+
+.form-footer {
+    margin-top: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e8ed;
+}
+
+.form-footer p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.form-footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+/* 输入提示文字 */
+
+.input-hint {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 0.3rem;
+    font-style: italic;
+}
+
+
+/* 认证模态框特定样式 */
+
+#loginModal .modal-content,
+#registerModal .modal-content {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+#loginModal .modal-header h3,
+#registerModal .modal-header h3 {
+    color: #2c3e50;
+}
+
+
+/* 密码强度提示 */
+
+.password-strength {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.password-strength.weak {
+    color: #e74c3c;
+}
+
+.password-strength.medium {
+    color: #f39c12;
+}
+
+.password-strength.strong {
+    color: #27ae60;
+}
+
+
+/* 用户头像占位符（未来扩展） */
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+
+/* 认证状态指示器 */
+
+.auth-status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.auth-status.online {
+    background: #27ae60;
+}
+
+.auth-status.offline {
+    background: #95a5a6;
+}
+
+
+/* 响应式设计 - 认证界面 */
+
+@media (max-width: 768px) {
+    .user-actions,
+    .auth-actions {
+        gap: 0.5rem;
+    }
+    .welcome-text {
+        display: none;
+        /* 在小屏幕上隐藏欢迎文字 */
+    }
+    #loginModal .modal-content,
+    #registerModal .modal-content {
+        margin: 20px;
+        max-width: none;
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* 加载动画 */
+
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* 表单验证样式 */
+
+.form-group.error input {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.form-group.success input {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+
+/* 安全提示样式增强 */
+
+.security-notice.auth-notice {
+    background: #e3f2fd;
+    border-color: #bbdefb;
+}
+
+.security-notice.auth-notice .notice-icon {
+    color: #2196f3;
+}
+
+
+/* 连接统计信息 */
+
+.connection-stats {
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e1e8ed;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.connection-stats span {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.header-links-div{
+    display: block;
+    min-width: 344px;
+    margin-left: 18%;
+}
+
+h1{
+    min-width: 213.9px;
+}
+
+.header_link{
+    color: white;
+    text-decoration: none;
+    padding: 0px 15px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    margin: 0px 10px;
+    min-width: 66px;
+}
+.header_link:hover{
+    color: #3498db;
+    transition: all 0.3s ease;
+}

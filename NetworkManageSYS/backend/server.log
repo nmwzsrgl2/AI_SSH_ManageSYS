@@ -1,0 +1,251 @@
+2026-01-30 14:41:36,670 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5555
+ * Running on http://10.0.147.50:5555
+2026-01-30 14:41:36,670 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-30 14:41:36,671 - werkzeug - INFO -  * Restarting with stat
+2026-01-30 14:41:40,261 - werkzeug - WARNING -  * Debugger is active!
+2026-01-30 14:41:40,261 - werkzeug - INFO -  * Debugger PIN: 114-108-783
+2026-01-30 14:42:57,401 - werkzeug - INFO -  * Detected change in '/root/NetworkManageSYS/backend/app.py', reloading
+2026-01-30 14:42:58,078 - werkzeug - INFO -  * Restarting with stat
+2026-01-30 14:43:01,612 - werkzeug - WARNING -  * Debugger is active!
+2026-01-30 14:43:01,613 - werkzeug - INFO -  * Debugger PIN: 114-108-783
+2026-01-30 14:43:03,720 - werkzeug - INFO -  * Detected change in '/root/NetworkManageSYS/backend/app.py', reloading
+2026-01-30 14:43:04,346 - werkzeug - INFO -  * Restarting with stat
+2026-01-30 14:43:07,908 - werkzeug - WARNING -  * Debugger is active!
+2026-01-30 14:43:07,909 - werkzeug - INFO -  * Debugger PIN: 114-108-783
+2026-01-30 14:43:08,987 - werkzeug - INFO -  * Detected change in '/root/NetworkManageSYS/backend/app.py', reloading
+2026-01-30 14:43:09,574 - werkzeug - INFO -  * Restarting with stat
+2026-01-30 14:43:13,246 - werkzeug - WARNING -  * Debugger is active!
+2026-01-30 14:43:13,247 - werkzeug - INFO -  * Debugger PIN: 114-108-783
+2026-01-30 14:43:35,080 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:35] "[32mGET / HTTP/1.1[0m" 302 -
+2026-01-30 14:43:35,107 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:35] "GET /login HTTP/1.1" 200 -
+2026-01-30 14:43:35,125 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:35] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-01-30 14:43:35,138 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:35] "GET /static/images/background.png HTTP/1.1" 200 -
+2026-01-30 14:43:35,184 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:35] "GET /static/images/favicon.svg HTTP/1.1" 200 -
+2026-01-30 14:43:51,078 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:51] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+2026-01-30 14:43:59,806 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:43:59] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+2026-01-30 14:44:29,387 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "POST /api/login HTTP/1.1" 200 -
+2026-01-30 14:44:29,453 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET / HTTP/1.1" 200 -
+2026-01-30 14:44:29,466 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:44:29,475 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2026-01-30 14:44:29,476 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/js/socket.io.js HTTP/1.1" 200 -
+2026-01-30 14:44:29,480 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+2026-01-30 14:44:29,485 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/js/echarts.min.js HTTP/1.1" 200 -
+2026-01-30 14:44:29,490 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-01-30 14:44:29,490 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-01-30 14:44:29,492 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /static/js/markdown-it.min.js HTTP/1.1" 200 -
+2026-01-30 14:44:29,562 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /socket.io/?EIO=4&transport=polling&t=PmDfNUr HTTP/1.1" 200 -
+2026-01-30 14:44:29,563 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:44:29,580 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "POST /socket.io/?EIO=4&transport=polling&t=PmDfNVD&sid=sFdSFd27B-qVKZM4AAAA HTTP/1.1" 200 -
+2026-01-30 14:44:29,583 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:29] "GET /socket.io/?EIO=4&transport=polling&t=PmDfNVD.0&sid=sFdSFd27B-qVKZM4AAAA HTTP/1.1" 200 -
+2026-01-30 14:44:30,563 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:30] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:44:35,559 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:35] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:44:40,559 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:40] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:44:43,981 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:43] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:44:44,181 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:44] "GET /api/getusers HTTP/1.1" 200 -
+2026-01-30 14:44:45,084 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:45] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:44:45,559 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:45] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:44:48,762 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:48] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:44:49,059 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:49] "GET /api/getusers HTTP/1.1" 200 -
+2026-01-30 14:44:50,558 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:50] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:44:52,717 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:52] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:44:55,558 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:55] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:44:59,430 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:59] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:44:59,612 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:44:59] "GET /api/getusers HTTP/1.1" 200 -
+2026-01-30 14:45:00,558 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:00] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:45:05,558 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:05] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:45:10,558 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:10] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:45:15,558 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:15] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:45:20,557 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:20] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:45:22,577 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /inspection HTTP/1.1" 200 -
+2026-01-30 14:45:22,594 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:45:22,600 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /static/js/vue.min.js HTTP/1.1" 200 -
+2026-01-30 14:45:22,600 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /static/js/index.js HTTP/1.1" 200 -
+2026-01-30 14:45:22,602 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /static/css/index.css HTTP/1.1" 200 -
+2026-01-30 14:45:22,602 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /socket.io/?EIO=4&transport=websocket&sid=sFdSFd27B-qVKZM4AAAA HTTP/1.1" 200 -
+2026-01-30 14:45:22,605 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /static/js/script.js HTTP/1.1" 200 -
+2026-01-30 14:45:22,609 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /static/js/axios.min.js HTTP/1.1" 200 -
+2026-01-30 14:45:22,706 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:45:22,711 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /static/css/fonts/element-icons.woff HTTP/1.1" 200 -
+2026-01-30 14:45:22,723 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-30 14:45:22,726 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:22] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 14:45:43,430 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /ssh_mam HTTP/1.1" 200 -
+2026-01-30 14:45:43,442 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "[36mGET /static/js/socket.io.js HTTP/1.1[0m" 304 -
+2026-01-30 14:45:43,449 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:45:43,451 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "[36mGET /static/js/markdown-it.min.js HTTP/1.1[0m" 304 -
+2026-01-30 14:45:43,452 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /static/js/xterm.js HTTP/1.1" 200 -
+2026-01-30 14:45:43,454 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /static/css/aichat-style.css HTTP/1.1" 200 -
+2026-01-30 14:45:43,456 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-01-30 14:45:43,459 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /static/css/xterm.css HTTP/1.1" 200 -
+2026-01-30 14:45:43,460 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /static/js/aichat.js HTTP/1.1" 200 -
+2026-01-30 14:45:43,508 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /api/tags HTTP/1.1" 200 -
+2026-01-30 14:45:43,509 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:45:43,526 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /socket.io/?EIO=4&transport=polling&t=PmDffYd HTTP/1.1" 200 -
+2026-01-30 14:45:43,527 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 14:45:43,529 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /api/chat/history HTTP/1.1" 200 -
+2026-01-30 14:45:43,540 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 14:45:43,575 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "POST /socket.io/?EIO=4&transport=polling&t=PmDffZN&sid=hGtOj4R9_AEJaFywAAAC HTTP/1.1" 200 -
+2026-01-30 14:45:43,576 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:43] "GET /socket.io/?EIO=4&transport=polling&t=PmDffZO&sid=hGtOj4R9_AEJaFywAAAC HTTP/1.1" 200 -
+2026-01-30 14:45:54,033 - werkzeug - INFO - 10.0.147.201 - - [30/Jan/2026 14:45:54] "GET /socket.io/?EIO=4&transport=websocket&sid=hGtOj4R9_AEJaFywAAAC HTTP/1.1" 200 -
+2026-01-30 14:46:25,292 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:25] "[32mGET / HTTP/1.1[0m" 302 -
+2026-01-30 14:46:25,312 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:25] "GET /login HTTP/1.1" 200 -
+2026-01-30 14:46:25,366 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:25] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-01-30 14:46:25,495 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:25] "GET /static/images/background.png HTTP/1.1" 200 -
+2026-01-30 14:46:25,591 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:25] "GET /static/images/favicon.svg HTTP/1.1" 200 -
+2026-01-30 14:46:30,965 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:30] "POST /api/login HTTP/1.1" 200 -
+2026-01-30 14:46:30,994 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:30] "GET / HTTP/1.1" 200 -
+2026-01-30 14:46:31,036 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:46:31,038 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2026-01-30 14:46:31,039 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/js/socket.io.js HTTP/1.1" 200 -
+2026-01-30 14:46:31,043 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/js/echarts.min.js HTTP/1.1" 200 -
+2026-01-30 14:46:31,045 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+2026-01-30 14:46:31,048 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2026-01-30 14:46:31,049 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/js/markdown-it.min.js HTTP/1.1" 200 -
+2026-01-30 14:46:31,055 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-01-30 14:46:31,156 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /socket.io/?EIO=4&transport=polling&t=PmDfqrn HTTP/1.1" 200 -
+2026-01-30 14:46:31,158 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:46:31,211 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "POST /socket.io/?EIO=4&transport=polling&t=PmDfqsD&sid=Fb76s_zEVYIPKpwxAAAE HTTP/1.1" 200 -
+2026-01-30 14:46:31,212 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:31] "GET /socket.io/?EIO=4&transport=polling&t=PmDfqsE&sid=Fb76s_zEVYIPKpwxAAAE HTTP/1.1" 200 -
+2026-01-30 14:46:32,156 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:32] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:46:34,977 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:34] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:46:36,255 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:36] "GET /api/getusers HTTP/1.1" 200 -
+2026-01-30 14:46:37,165 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:37] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:46:40,765 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /inspection HTTP/1.1" 200 -
+2026-01-30 14:46:40,808 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /static/css/index.css HTTP/1.1" 200 -
+2026-01-30 14:46:40,809 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:46:40,815 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /static/js/index.js HTTP/1.1" 200 -
+2026-01-30 14:46:40,817 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /static/js/axios.min.js HTTP/1.1" 200 -
+2026-01-30 14:46:40,818 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /static/js/vue.min.js HTTP/1.1" 200 -
+2026-01-30 14:46:40,820 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /static/js/script.js HTTP/1.1" 200 -
+2026-01-30 14:46:40,835 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /socket.io/?EIO=4&transport=websocket&sid=Fb76s_zEVYIPKpwxAAAE HTTP/1.1" 200 -
+2026-01-30 14:46:40,991 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /static/css/fonts/element-icons.woff HTTP/1.1" 200 -
+2026-01-30 14:46:40,997 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:40] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:46:41,036 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:41] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 14:46:41,042 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-30 14:46:42,665 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /ssh_mam HTTP/1.1" 200 -
+2026-01-30 14:46:42,708 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "[36mGET /static/js/socket.io.js HTTP/1.1[0m" 304 -
+2026-01-30 14:46:42,710 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /static/css/xterm.css HTTP/1.1" 200 -
+2026-01-30 14:46:42,715 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /static/js/xterm.js HTTP/1.1" 200 -
+2026-01-30 14:46:42,716 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "[36mGET /static/js/markdown-it.min.js HTTP/1.1[0m" 304 -
+2026-01-30 14:46:42,717 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /static/css/aichat-style.css HTTP/1.1" 200 -
+2026-01-30 14:46:42,720 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:46:42,722 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-01-30 14:46:42,724 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /static/js/aichat.js HTTP/1.1" 200 -
+2026-01-30 14:46:42,799 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:46:42,802 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /api/tags HTTP/1.1" 200 -
+2026-01-30 14:46:42,822 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /api/chat/history HTTP/1.1" 200 -
+2026-01-30 14:46:42,827 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /socket.io/?EIO=4&transport=polling&t=PmDfti4 HTTP/1.1" 200 -
+2026-01-30 14:46:42,829 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 14:46:42,848 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 14:46:42,851 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "POST /socket.io/?EIO=4&transport=polling&t=PmDftia&sid=Ci3mCESxvtH1WjwbAAAG HTTP/1.1" 200 -
+2026-01-30 14:46:42,867 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /socket.io/?EIO=4&transport=polling&t=PmDftia.0&sid=Ci3mCESxvtH1WjwbAAAG HTTP/1.1" 200 -
+2026-01-30 14:46:42,900 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:46:42] "GET /socket.io/?EIO=4&transport=polling&t=PmDftjM&sid=Ci3mCESxvtH1WjwbAAAG HTTP/1.1" 200 -
+2026-01-30 14:47:22,639 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "GET / HTTP/1.1" 200 -
+2026-01-30 14:47:22,690 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,692 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,696 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/js/echarts.min.js HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,697 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/js/socket.io.js HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,699 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,701 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,704 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/js/markdown-it.min.js HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,706 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-01-30 14:47:22,722 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "GET /socket.io/?EIO=4&transport=websocket&sid=Ci3mCESxvtH1WjwbAAAG HTTP/1.1" 200 -
+2026-01-30 14:47:22,810 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "GET /socket.io/?EIO=4&transport=polling&t=PmDg1Su HTTP/1.1" 200 -
+2026-01-30 14:47:22,814 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 14:47:22,850 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "POST /socket.io/?EIO=4&transport=polling&t=PmDg1TP&sid=svZABxbqAgorKk00AAAI HTTP/1.1" 200 -
+2026-01-30 14:47:22,852 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:22] "GET /socket.io/?EIO=4&transport=polling&t=PmDg1TQ&sid=svZABxbqAgorKk00AAAI HTTP/1.1" 200 -
+2026-01-30 14:47:23,814 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:23] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:28,811 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:28] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:33,812 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:33] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:38,809 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:38] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:40,614 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:40] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:47:43,633 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:43] "GET /api/getusers HTTP/1.1" 200 -
+2026-01-30 14:47:43,808 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:43] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:47,228 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:47] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:47:47,976 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:47] "GET /api/getusers HTTP/1.1" 200 -
+2026-01-30 14:47:48,814 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:48] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:49,451 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:49] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:47:53,822 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:53] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:47:54,264 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:54] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:47:58,814 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:47:58] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:01,271 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:01] "[35m[1mGET /api/zabbix/hosts HTTP/1.1[0m" 500 -
+2026-01-30 14:48:03,808 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:03] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:08,835 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:08] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:13,833 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:13] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:18,831 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:18] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:23,829 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:23] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:28,838 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:28] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:33,905 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:33] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:38,836 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:38] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:48:43,905 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:48:43] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 14:49:29,563 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 14:49:29] "GET /socket.io/?EIO=4&transport=websocket&sid=svZABxbqAgorKk00AAAI HTTP/1.1" 200 -
+2026-01-30 15:16:50,361 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:16:50,401 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /ssh_mam HTTP/1.1" 200 -
+2026-01-30 15:16:50,447 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/js/socket.io.js HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,449 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/css/xterm.css HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,451 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,456 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/css/aichat-style.css HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,457 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/js/markdown-it.min.js HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,457 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/js/xterm.js HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,460 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,463 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "[36mGET /static/js/aichat.js HTTP/1.1[0m" 304 -
+2026-01-30 15:16:50,633 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 15:16:50,636 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /api/tags HTTP/1.1" 200 -
+2026-01-30 15:16:50,654 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /api/chat/history HTTP/1.1" 200 -
+2026-01-30 15:16:50,675 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 15:16:50,676 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /socket.io/?EIO=4&transport=polling&t=PmDmn41 HTTP/1.1" 200 -
+2026-01-30 15:16:50,695 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /api/connections HTTP/1.1" 200 -
+2026-01-30 15:16:50,710 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "POST /socket.io/?EIO=4&transport=polling&t=PmDmn4X&sid=Ci-3FL2_7SU-iSOWAAAK HTTP/1.1" 200 -
+2026-01-30 15:16:50,711 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:16:50] "GET /socket.io/?EIO=4&transport=polling&t=PmDmn4Z&sid=Ci-3FL2_7SU-iSOWAAAK HTTP/1.1" 200 -
+2026-01-30 15:18:29,576 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:18:29] "GET /socket.io/?EIO=4&transport=websocket&sid=Ci-3FL2_7SU-iSOWAAAK HTTP/1.1" 200 -
+2026-01-30 15:20:38,266 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:20:38] "GET /socket.io/?EIO=4&transport=polling&t=PmDnece HTTP/1.1" 200 -
+2026-01-30 15:20:38,285 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:20:38] "POST /socket.io/?EIO=4&transport=polling&t=PmDneeb&sid=yQlKnuiYsGSl8sVhAAAM HTTP/1.1" 200 -
+2026-01-30 15:20:38,287 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:20:38] "GET /socket.io/?EIO=4&transport=polling&t=PmDneec&sid=yQlKnuiYsGSl8sVhAAAM HTTP/1.1" 200 -
+2026-01-30 15:21:49,578 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:21:49] "GET /socket.io/?EIO=4&transport=websocket&sid=yQlKnuiYsGSl8sVhAAAM HTTP/1.1" 200 -
+2026-01-30 15:32:18,447 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "GET / HTTP/1.1" 200 -
+2026-01-30 15:32:18,505 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,508 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,511 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/js/echarts.min.js HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,513 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,514 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/js/socket.io.js HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,518 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,519 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/js/markdown-it.min.js HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,520 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-01-30 15:32:18,712 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "GET /socket.io/?EIO=4&transport=polling&t=PmDqJen HTTP/1.1" 200 -
+2026-01-30 15:32:18,716 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "GET /api/auth/check HTTP/1.1" 200 -
+2026-01-30 15:32:18,742 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "POST /socket.io/?EIO=4&transport=polling&t=PmDqJfJ&sid=cW7pLyY5A87rX9MuAAAO HTTP/1.1" 200 -
+2026-01-30 15:32:18,742 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:18] "GET /socket.io/?EIO=4&transport=polling&t=PmDqJfJ.0&sid=cW7pLyY5A87rX9MuAAAO HTTP/1.1" 200 -
+2026-01-30 15:32:19,714 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:19] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:24,706 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:24] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:29,719 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:29] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:34,960 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:34] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:39,808 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:39] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:44,802 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:44] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:49,807 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:49] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:54,810 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:54] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:32:59,809 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:32:59] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:33:04,805 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:33:04] "GET /api/monitor/local HTTP/1.1" 200 -
+2026-01-30 15:33:29,584 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:33:29] "GET /socket.io/?EIO=4&transport=websocket&sid=cW7pLyY5A87rX9MuAAAO HTTP/1.1" 200 -
+2026-01-30 15:34:21,800 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:34:21] "GET /socket.io/?EIO=4&transport=polling&t=PmDqni9 HTTP/1.1" 200 -
+2026-01-30 15:34:21,819 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:34:21] "POST /socket.io/?EIO=4&transport=polling&t=PmDqniS&sid=JGMJu4ioHz6mb3UfAAAQ HTTP/1.1" 200 -
+2026-01-30 15:34:21,822 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:34:21] "GET /socket.io/?EIO=4&transport=polling&t=PmDqniU&sid=JGMJu4ioHz6mb3UfAAAQ HTTP/1.1" 200 -
+2026-01-30 15:35:49,585 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:35:49] "GET /socket.io/?EIO=4&transport=websocket&sid=JGMJu4ioHz6mb3UfAAAQ HTTP/1.1" 200 -
+2026-01-30 15:39:44,796 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:39:44] "GET /socket.io/?EIO=4&transport=polling&t=PmDs0Z0 HTTP/1.1" 200 -
+2026-01-30 15:39:44,829 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:39:44] "POST /socket.io/?EIO=4&transport=polling&t=PmDs0ZJ&sid=mhTQPZ2S-Y9lMPf2AAAS HTTP/1.1" 200 -
+2026-01-30 15:39:44,843 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:39:44] "GET /socket.io/?EIO=4&transport=polling&t=PmDs0ZL&sid=mhTQPZ2S-Y9lMPf2AAAS HTTP/1.1" 200 -
+2026-01-30 15:41:09,590 - werkzeug - INFO - 10.0.147.66 - - [30/Jan/2026 15:41:09] "GET /socket.io/?EIO=4&transport=websocket&sid=mhTQPZ2S-Y9lMPf2AAAS HTTP/1.1" 200 -
+2026-01-30 15:49:22,823 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5555
+ * Running on http://10.0.147.50:5555
+2026-01-30 15:49:22,824 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-30 15:49:22,824 - werkzeug - INFO -  * Restarting with stat
+2026-01-30 15:49:26,503 - werkzeug - WARNING -  * Debugger is active!
+2026-01-30 15:49:26,503 - werkzeug - INFO -  * Debugger PIN: 114-108-783
+2026-01-30 15:52:36,081 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5555
+ * Running on http://10.0.147.50:5555
+2026-01-30 15:52:36,081 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-30 15:52:36,082 - werkzeug - INFO -  * Restarting with stat

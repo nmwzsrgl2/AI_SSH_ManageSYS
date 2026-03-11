@@ -1,0 +1,1 @@
+source /root/ssh_mcp/.venv/bin/activate && python /root/ssh_mcp/app/ssh_mcp.py

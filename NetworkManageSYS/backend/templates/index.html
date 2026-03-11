@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <!-- 启用 Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="{{ url_for('static', filename='js/socket.io.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/echarts.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    <!-- 添加 Bootstrap JS（在 jQuery 之后） -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/markdown-it.min.js') }}"></script>
+</head>
+<style>
+    h4{
+        font-weight: bold;
+        color: black;
+    }
+</style>
+<body>
+     <!-- 顶部导航栏 -->
+    <div class="header">
+        <h1> AiOps 运维管理平台</h1>
+        <div class="header-links-div">
+            <a href="/" class="header_link">首页</a>
+            <a href="/inspection" class="header_link">自动巡检</a>
+            <a href="/ssh_mam" class="header_link">SSH连接</a>
+        </div>
+        <div class="header-actions">
+
+            <!-- 登录状态下显示的按钮 -->
+            <div class="user-actions" id="userActions" style="display: none;">
+
+                <span class="welcome-text">欢迎，<span id="currentUsername"></span></span>
+                <button class="btn btn-secondary" onclick="logout()">退出登录</button>
+            </div>
+        </div>
+    </div>
+    
+<div class="container">
+    <!-- 左侧菜单 -->
+    <aside class="sidebar">
+        <ul>
+        <li class="active" onclick="showPage('local')">本机监控</li>
+        <li onclick="showPage('zabbix')">Zabbix 服务器</li>
+        <li onclick="showPage('user')">用户管理</li>
+        </ul>
+    </aside>
+
+    <!-- 主内容 -->
+    <main class="content">
+        <!-- 本机监控 -->
+        <div class="charts">
+            <div class="chart-box">
+                <h3>CPU 使用率</h3>
+                <div id="cpuChart" class="chart"></div>
+            </div>
+
+            <div class="chart-box">
+                <h3>内存使用率</h3>
+                <div id="memChart" class="chart"></div>
+            </div>
+
+            <div class="chart-box">
+                <h3>磁盘使用率</h3>
+                <div id="diskChart" class="chart"></div>
+            </div>
+        </div>
+
+        <div class="container_info">
+            <div class = "page" id="log_info_page">
+            <!-- 本机日志 -->
+             <div id="loaal_log_info">
+                <h3>本机日志</h3><br>
+                <div id="logContent">
+                    <div class="log-container">
+                        <div class="log-header">
+                            <div>时间戳</div>
+                            <div>级别</div>
+                            <div>消息</div>
+                            <div>Logger</div>
+                            <div>位置</div>
+                        </div>
+                        
+                        <div class="log-list" id="log-list">
+                            <div class="empty-state" id="empty-state">
+                                <i class="fas fa-file-alt"></i>
+                                <h3>暂无日志</h3>
+                                <p>等待接收服务器日志...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- 底部信息栏通知栏 -->
+            <div class="notice">
+                <div class="notice-content">
+                    <h3>系统更新日志</h3><br>
+                    <div class="notice_info">
+                        <ol>
+                            <li>v0.0 完成ssh websockie 模块</li>
+                            <li>v0.1 更新了AI助手模块</li>
+                            <li>v0.2 更新了巡检模块</li>
+                            <li>v0.3 更新了仪表盘和用户管理模块</li>
+                            <li>v0.4 修复了一些后端BUG </li>
+                            <li>v0.5 新增AI的MCP功能,可以使Ai干活了</li>
+                            <li>v0.6 使用dify 让Ai变成Agent自动解决问题以及修复了一些前端的BUG</li>
+                            <li>v0.7 修复了很多的前端 BUG,吃了个汉堡！</li>
+                            <li>v0.8 修复了 SSH终端的显示问题,该去睡觉了！</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            
+            <!-- zabbix 服务器 -->
+            <div id="zabbixPage" class="page">
+                <h3>Zabbix 服务器</h3>
+                    <div id="zabbixContent">
+                        <div id="hostList">
+                        <!-- 主机列表将通过JS动态生成 -->
+                        </div>
+                    </div>
+            </div>
+
+            <!-- 用户管理 -->
+            <div id="userPage" class="page">
+                <div class="user_page_header">
+                    <h3>用户管理</h3>
+                    <a href="#addEmployeeModal" class="" data-toggle="modal">
+                        <button>添加用户</button>
+                    </a>
+                    
+                </div>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                        <th>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="selectAll">
+                                <label for="selectAll"></label>
+                            </span>
+                        </th>
+                        <th>用户名</th>
+                        <th>邮箱</th>
+                        <th>角色</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
+                        
+                    </tbody>
+                </table>
+                        
+                <!-- 添加用户 -->
+                <div id="addEmployeeModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form action="/api/users/" method="post">
+                                <div class="modal-header">
+                                <h4>添加用户</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <div class="form-group">
+                                    <label>名字</label>
+                                    <input type="text" class="form-control" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>邮箱</label>
+                                    <input type="email" class="form-control"  name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>密码</label>
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="取消">
+                                <input type="submit" class="btn btn-success" value="添加">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- 编辑用户 -->
+                <div id="editEmployeeModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form>
+                                <div class="modal-header">
+                                <h4 class="modal-title">编辑用户</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <div class="form-group">
+                                    <label>姓名</label>
+                                    <input type="text" class="form-control" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>邮箱</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>密码</label>
+                                    <input type="password" name="password">
+                                </div>
+                                <div class="form-group">
+                                    <label>角色</label>
+                                    <input type="text" class="form-control" name="role" required>
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <input type="submit" class="btn btn-info" value="Save">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!--删除用户 -->
+                <div id="deleteEmployeeModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <form action="/api/users/" method="post">
+                            <div class="modal-header">
+                            <h4 class="modal-title">删除用户</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                            <p>你确定要删除这个用户吗?</p>
+                            <p class="text-warning"><small>这个行为不能完成</small></p>
+                            </div>
+                            <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</div>
+</body>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</html>

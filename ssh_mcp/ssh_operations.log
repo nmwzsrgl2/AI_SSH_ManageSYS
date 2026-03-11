@@ -1,0 +1,340 @@
+2026-02-01 15:06:51,869 - httpx - INFO - HTTP Request: GET https://pypi.org/pypi/fastmcp/json "HTTP/1.1 200 OK"
+2026-02-01 15:06:51,980 - docket.worker - INFO - Starting worker 'localhost.localdomain#143677' with the following tasks:
+2026-02-01 15:06:51,981 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-01 15:06:51,981 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-01 15:06:51,981 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-01 15:06:51,982 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-01 15:06:54,399 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-02-01 17:08:12,667 - docket.worker - INFO - Starting worker 'localhost.localdomain#147629' with the following tasks:
+2026-02-01 17:08:12,667 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-01 17:08:12,668 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-01 17:08:12,668 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-01 17:08:12,669 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-01 17:08:33,988 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: bed0d520f4f84000be45ef3b48f21ddb
+2026-02-01 17:08:34,002 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-01 17:08:34,010 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-01 17:08:34,016 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-01 17:08:34,022 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2026-02-01 17:08:43,144 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:08:50,730 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:08:59,301 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:09:08,172 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:11:25,964 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-02-01 17:15:22,584 - docket.worker - INFO - Starting worker 'localhost.localdomain#147923' with the following tasks:
+2026-02-01 17:15:22,585 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-01 17:15:22,585 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-01 17:15:22,585 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-01 17:15:22,586 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-01 17:15:27,394 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: 13626b6f51e84871aac60ef2374ee3be
+2026-02-01 17:15:27,408 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-01 17:15:27,416 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-01 17:15:27,422 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-01 17:15:27,430 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2026-02-01 17:15:36,257 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:15:41,502 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:15:48,670 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:15:58,476 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:17:05,266 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-02-01 17:17:08,627 - docket.worker - INFO - Starting worker 'localhost.localdomain#148067' with the following tasks:
+2026-02-01 17:17:08,627 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-01 17:17:08,628 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-01 17:17:08,628 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-01 17:17:08,629 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-01 17:17:15,414 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: 0b9510062a154c3b87f81db6887d6630
+2026-02-01 17:17:15,428 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-01 17:17:15,436 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-01 17:17:15,442 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-01 17:17:15,447 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2026-02-01 17:17:20,437 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:17:28,164 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:17:35,044 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:17:47,641 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:18:09,862 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-02-01 17:18:12,450 - docket.worker - INFO - Starting worker 'localhost.localdomain#148188' with the following tasks:
+2026-02-01 17:18:12,450 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-01 17:18:12,451 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-01 17:18:12,451 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-01 17:18:12,452 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-01 17:18:16,598 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: c8c1e8c55ca541d8b586100ecefc9fbf
+2026-02-01 17:18:16,612 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-01 17:18:16,621 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-01 17:18:16,627 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-01 17:18:16,633 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2026-02-01 17:18:22,243 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:18:31,269 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:18:40,684 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:18:51,798 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-01 17:20:54,449 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-02-04 15:33:26,596 - ssh_mcp - INFO - 建立新连接: huawei@10.0.147.254:22
+2026-02-04 15:33:26,596 - ssh_mcp - INFO - 使用密码认证
+2026-02-04 15:33:26,599 - paramiko.transport - INFO - Connected (version 2.0, client -)
+2026-02-04 15:33:29,511 - paramiko.transport - INFO - Authentication (password) failed.
+2026-02-04 15:33:29,512 - ssh_mcp - ERROR - 认证失败: huawei@10.0.147.254:22
+2026-02-04 15:38:54,387 - ssh_mcp - INFO - 建立新连接: admin@10.0.147.254:22
+2026-02-04 15:38:54,387 - ssh_mcp - INFO - 使用密码认证
+2026-02-04 15:38:54,390 - paramiko.transport - INFO - Connected (version 2.0, client -)
+2026-02-04 15:38:57,243 - paramiko.transport - INFO - Authentication (password) failed.
+2026-02-04 15:38:57,243 - ssh_mcp - ERROR - 认证失败: admin@10.0.147.254:22
+2026-02-04 16:36:47,434 - ssh_mcp - INFO - 建立新连接: admin@10.0.147.254:22
+2026-02-04 16:36:47,435 - ssh_mcp - INFO - 使用密码认证
+2026-02-04 16:36:47,437 - paramiko.transport - INFO - Connected (version 2.0, client -)
+2026-02-04 16:36:50,410 - paramiko.transport - INFO - Authentication (password) successful!
+2026-02-04 16:36:50,411 - ssh_mcp - INFO - 连接成功: admin@10.0.147.254:22
+2026-02-04 16:36:50,411 - ssh_mcp - INFO - 执行命令: sys
+2026-02-04 16:36:50,432 - paramiko.transport - ERROR - Socket exception: Connection reset by peer (104)
+2026-02-04 16:36:50,433 - ssh_mcp - INFO - 命令执行完成，用时: 0.02秒，退出状态: -1
+2026-02-04 16:36:50,433 - ssh_mcp - INFO - 执行命令: interface  GigabitEthernet 0/0/10
+2026-02-04 16:36:50,433 - ssh_mcp - ERROR - 命令执行失败: SSH session not active
+2026-02-04 16:38:41,721 - ssh_mcp - INFO - 建立新连接: admin@10.0.147.254:22
+2026-02-04 16:38:41,722 - ssh_mcp - INFO - 使用密码认证
+2026-02-04 16:38:41,738 - paramiko.transport - INFO - Connected (version 2.0, client -)
+2026-02-04 16:38:44,607 - paramiko.transport - INFO - Authentication (password) successful!
+2026-02-04 16:38:44,607 - ssh_mcp - INFO - 连接成功: admin@10.0.147.254:22
+2026-02-04 16:38:57,153 - ssh_mcp - INFO - 执行命令: sys
+2026-02-04 16:39:00,747 - paramiko.transport - ERROR - Socket exception: Connection reset by peer (104)
+2026-02-04 16:40:21,841 - ssh_mcp - INFO - 命令执行完成，用时: 81.99秒，退出状态: -1
+2026-02-04 16:41:47,994 - ssh_mcp - INFO - 执行命令: interface  GigabitEthernet 0/0/10
+2026-02-04 16:44:34,784 - ssh_mcp - INFO - 建立新连接: admin@10.0.147.254:22
+2026-02-04 16:44:34,784 - ssh_mcp - INFO - 使用密码认证
+2026-02-04 16:44:34,790 - paramiko.transport - INFO - Connected (version 2.0, client -)
+2026-02-04 16:44:37,740 - paramiko.transport - INFO - Authentication (password) successful!
+2026-02-04 16:44:37,740 - ssh_mcp - INFO - 连接成功: admin@10.0.147.254:22
+2026-02-04 16:44:37,740 - ssh_mcp - INFO - 执行命令: 
+    sys
+    interface  GigabitEthernet 0/0/10
+    bandwidth 100000
+
+2026-02-04 16:44:38,167 - paramiko.transport - ERROR - Socket exception: Connection reset by peer (104)
+2026-02-04 16:44:38,167 - ssh_mcp - INFO - 命令执行完成，用时: 0.43秒，退出状态: -1
+2026-02-04 18:15:20,140 - docket.worker - INFO - Starting worker 'localhost.localdomain#226794' with the following tasks:
+2026-02-04 18:15:20,140 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-04 18:15:20,141 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-04 18:15:20,141 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-04 18:15:20,147 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-04 18:19:27,170 - ssh_mcp - INFO - 建立新连接: admin@10.0.147.254:22
+2026-02-04 18:19:27,170 - ssh_mcp - INFO - 使用密码认证
+2026-02-04 18:19:27,173 - paramiko.transport - INFO - Connected (version 2.0, client -)
+2026-02-04 18:19:30,085 - paramiko.transport - INFO - Authentication (password) successful!
+2026-02-04 18:19:30,085 - ssh_mcp - INFO - 连接成功: admin@10.0.147.254:22
+2026-02-04 18:19:30,086 - ssh_mcp - INFO - 执行命令: 
+    sys
+    interface  GigabitEthernet 0/0/10
+    bandwidth 100000
+
+2026-02-04 18:19:30,122 - paramiko.transport - ERROR - Socket exception: Connection reset by peer (104)
+2026-02-04 18:19:30,122 - ssh_mcp - INFO - 命令执行完成，用时: 0.04秒，退出状态: -1
+2026-02-06 16:58:30,607 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2026-02-06 17:00:48,218 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2026-02-06 17:01:47,272 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 500 INTERNAL SERVER ERROR"
+2026-02-06 17:25:50,136 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:26:12,227 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:27:47,059 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:28:37,954 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:29:05,198 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:30:22,386 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:31:59,935 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:31:59,951 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:32:24,267 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:32:24,286 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:33:02,535 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:33:02,554 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:33:55,448 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:33:55,467 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:34:35,528 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/devices/batch-inspect "HTTP/1.1 400 BAD REQUEST"
+2026-02-06 17:35:10,125 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:35:10,141 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:35:32,786 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:35:32,802 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:35:39,704 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/devices/batch-inspect "HTTP/1.1 200 OK"
+2026-02-06 17:36:06,657 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:36:06,673 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:38:26,890 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:38:26,905 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:38:33,828 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/devices/batch-inspect "HTTP/1.1 200 OK"
+2026-02-06 17:38:44,413 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:38:44,428 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:38:51,180 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/devices/batch-inspect "HTTP/1.1 200 OK"
+2026-02-06 17:40:34,238 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:40:34,253 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:40:41,094 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/devices/batch-inspect "HTTP/1.1 200 OK"
+2026-02-06 17:41:15,145 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/login "HTTP/1.1 200 OK"
+2026-02-06 17:41:15,160 - httpx - INFO - HTTP Request: GET http://10.0.147.50:5555/api/devices "HTTP/1.1 200 OK"
+2026-02-06 17:41:22,042 - httpx - INFO - HTTP Request: POST http://10.0.147.50:5555/api/devices/batch-inspect "HTTP/1.1 200 OK"
+2026-03-01 18:02:07,669 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 18:02:07,670 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:02:07,774 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 18:02:07,774 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 18:02:08,183 | INFO | ssh_mcp | 命令执行完成，用时: 0.41秒，退出状态: 0
+2026-03-01 18:02:08,185 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 18:02:54,811 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 18:02:54,811 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:02:54,943 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 18:02:54,943 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 18:02:55,331 | INFO | ssh_mcp | 命令执行完成，用时: 0.39秒，退出状态: 0
+2026-03-01 18:29:48,773 | INFO | ssh_mcp | 建立新连接: root@10.0.147.10:22
+2026-03-01 18:29:48,773 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:29:48,811 | ERROR | ssh_mcp | SSH连接失败: No authentication methods available
+2026-03-01 18:30:08,898 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 18:30:08,899 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:30:09,040 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 18:34:55,957 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 18:34:55,958 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:34:56,099 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 18:34:56,099 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 18:34:56,474 | INFO | ssh_mcp | 命令执行完成，用时: 0.37秒，退出状态: 0
+2026-03-01 18:36:16,689 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 18:36:34,990 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 18:36:34,991 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:36:35,091 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 18:36:35,091 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 18:36:35,474 | INFO | ssh_mcp | 命令执行完成，用时: 0.38秒，退出状态: 0
+2026-03-01 18:36:43,916 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 18:37:55,447 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 18:37:55,447 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 18:37:55,547 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 18:37:55,548 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 18:37:55,933 | INFO | ssh_mcp | 命令执行完成，用时: 0.39秒，退出状态: 0
+2026-03-01 19:28:44,060 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:28:44,061 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:28:44,166 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:28:44,166 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 19:28:44,561 | INFO | ssh_mcp | 命令执行完成，用时: 0.39秒，退出状态: 0
+2026-03-01 19:29:12,994 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:31:11,753 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:31:11,753 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:31:11,853 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:31:11,854 | INFO | ssh_mcp | 执行命令: cat /var/log/zabbix/zabbix_server.log
+2026-03-01 19:31:12,235 | INFO | ssh_mcp | 命令执行完成，用时: 0.38秒，退出状态: 0
+2026-03-01 19:36:12,366 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:36:12,366 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:36:12,511 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:36:12,512 | INFO | ssh_mcp | 执行命令: test -f '/tmp/zabbix_log_analysis.sh' && echo 'File exists' || echo 'File does not exist'
+2026-03-01 19:36:12,833 | INFO | ssh_mcp | 命令执行完成，用时: 0.32秒，退出状态: 0
+2026-03-01 19:36:12,834 | INFO | ssh_mcp | 执行命令: cat > '/tmp/zabbix_log_analysis.sh' << 'EOF'
+#!/bin/bash
+# 连接到服务器获取Zabbix server日志
+ssh -p 22 -l readuser 10.0.147.10 "cat /var/log/zabbix/zabbix_server.log" > /tmp/zabbix_server.log
+
+# 检查日志中关键错误和警告
+grep -iE "error|warning|failed|timeout" /tmp/zabbix_server.log | awk '{print $0}' > /tmp/error_warnings.log
+
+# 分析数据库连接问题（常见问题）
+grep -iE "db.*connection|db.*timeout" /tmp/zabbix_server.log | awk '{print $0}' > /tmp/db_errors.log
+
+# 检查性能指标异常（如CPU、内存）
+grep -iE "CPU|memory|load|active" /tmp/zabbix_server.log | awk '{print $0}' > /tmp/performance.log
+
+# 输出分析结果
+echo "Zabbix server日志分析报告" > /tmp/report.txt
+echo "错误/警告信息" >> /tmp/report.txt
+cat /tmp/error_warnings.log >> /tmp/report.txt
+echo "" >> /tmp/report.txt
+echo "数据库连接错误" >> /tmp/report.txt
+cat /tmp/db_errors.log >> /tmp/report.txt
+echo "" >> /tmp/report.txt
+echo "性能指标异常" >> /tmp/report.txt
+cat /tmp/performance.log >> /tmp/report.txt
+
+# 返回本地目录
+cd /tmp
+
+EOF
+2026-03-01 19:36:12,909 | INFO | ssh_mcp | 命令执行完成，用时: 0.07秒，退出状态: 0
+2026-03-01 19:36:12,909 | INFO | ssh_mcp | 执行命令: chmod 755 '/tmp/zabbix_log_analysis.sh'
+2026-03-01 19:36:13,020 | INFO | ssh_mcp | 命令执行完成，用时: 0.11秒，退出状态: 0
+2026-03-01 19:36:13,021 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:39:33,507 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:39:33,507 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:39:33,607 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:39:33,607 | INFO | ssh_mcp | 执行命令: find / -name "zabbix_server.log" 2>/dev/null
+2026-03-01 19:39:36,605 | INFO | ssh_mcp | 命令执行完成，用时: 3.00秒，退出状态: 1
+2026-03-01 19:39:36,606 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:46:28,382 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:46:28,382 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:46:28,529 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:46:54,462 | INFO | ssh_mcp | 执行命令: cat '/var/log/zabbix/zabbix_server.log'
+2026-03-01 19:47:00,587 | INFO | ssh_mcp | 命令执行完成，用时: 5.07秒，退出状态: 0
+2026-03-01 19:48:29,475 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:49:10,444 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:49:12,038 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:49:12,139 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:49:21,593 | INFO | ssh_mcp | 执行命令: cat '/var/log/zabbix/zabbix_server.log'
+2026-03-01 19:49:21,749 | INFO | ssh_mcp | 命令执行完成，用时: 0.16秒，退出状态: 0
+2026-03-01 19:49:21,752 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:50:03,950 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:50:03,951 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:50:04,055 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:50:04,056 | INFO | ssh_mcp | 执行命令: test -f '/tmp/zabbix_log_analysis' && echo 'File exists' || echo 'File does not exist'
+2026-03-01 19:50:04,364 | INFO | ssh_mcp | 命令执行完成，用时: 0.31秒，退出状态: 0
+2026-03-01 19:50:04,365 | INFO | ssh_mcp | 执行命令: cat > '/tmp/zabbix_log_analysis' << 'EOF'
+
+EOF
+2026-03-01 19:50:04,441 | INFO | ssh_mcp | 命令执行完成，用时: 0.07秒，退出状态: 0
+2026-03-01 19:50:04,442 | INFO | ssh_mcp | 执行命令: chmod 600 '/tmp/zabbix_log_analysis'
+2026-03-01 19:50:04,519 | INFO | ssh_mcp | 命令执行完成，用时: 0.08秒，退出状态: 0
+2026-03-01 19:50:04,522 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:50:15,314 | INFO | ssh_mcp | 建立新连接: root@10.0.147.10:22
+2026-03-01 19:50:15,315 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:50:15,348 | ERROR | ssh_mcp | SSH连接失败: No authentication methods available
+2026-03-01 19:52:39,707 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:52:39,708 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:52:39,809 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:52:39,810 | INFO | ssh_mcp | 执行命令: test -f '/tmp/test_connect.log' && echo 'File exists' || echo 'File does not exist'
+2026-03-01 19:52:40,135 | INFO | ssh_mcp | 命令执行完成，用时: 0.33秒，退出状态: 0
+2026-03-01 19:52:40,136 | INFO | ssh_mcp | 执行命令: cat > '/tmp/test_connect.log' << 'EOF'
+SSH connection successful
+EOF
+2026-03-01 19:52:40,210 | INFO | ssh_mcp | 命令执行完成，用时: 0.07秒，退出状态: 0
+2026-03-01 19:52:40,211 | INFO | ssh_mcp | 执行命令: chmod 644 '/tmp/test_connect.log'
+2026-03-01 19:52:40,284 | INFO | ssh_mcp | 命令执行完成，用时: 0.07秒，退出状态: 0
+2026-03-01 19:52:40,285 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:52:44,121 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:52:44,121 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:52:47,137 | ERROR | ssh_mcp | 认证失败: readuser@10.0.147.10:22
+2026-03-01 19:56:19,801 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:56:19,802 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:56:19,904 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:56:19,904 | INFO | ssh_mcp | 执行命令: cat '/var/log/zabbix/zabbix_server.log'
+2026-03-01 19:56:20,299 | INFO | ssh_mcp | 命令执行完成，用时: 0.39秒，退出状态: 0
+2026-03-01 19:56:20,300 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:58:43,499 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 19:58:43,500 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:58:43,640 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 19:58:53,044 | INFO | ssh_mcp | 执行命令: tail -n 20 '/var/log/zabbix/zabbix_server.log'
+2026-03-01 19:58:53,185 | INFO | ssh_mcp | 命令执行完成，用时: 0.14秒，退出状态: 0
+2026-03-01 19:59:32,989 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 19:59:45,174 | INFO | ssh_mcp | 建立新连接: root@10.0.147.10:22
+2026-03-01 19:59:45,175 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 19:59:45,209 | ERROR | ssh_mcp | SSH连接失败: No authentication methods available
+2026-03-01 20:00:43,871 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 20:00:43,871 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 20:00:43,982 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 20:00:43,983 | INFO | ssh_mcp | 执行命令: tail -n 20 '/var/log/zabbix/zabbix_server.log'
+2026-03-01 20:00:44,324 | INFO | ssh_mcp | 命令执行完成，用时: 0.34秒，退出状态: 0
+2026-03-01 20:00:44,326 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 20:02:06,638 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 20:02:06,638 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 20:02:06,738 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 20:02:06,739 | INFO | ssh_mcp | 执行命令: tail -n 20 '/var/log/nginx/access.log'
+2026-03-01 20:02:07,062 | INFO | ssh_mcp | 命令执行完成，用时: 0.32秒，退出状态: 0
+2026-03-01 20:02:07,064 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 20:08:21,992 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 20:08:21,992 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 20:08:22,093 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 20:08:22,094 | INFO | ssh_mcp | 执行命令: test -f '/var/log/nginx/access.log' && echo 'File exists' || echo 'File does not exist'
+2026-03-01 20:08:22,408 | INFO | ssh_mcp | 命令执行完成，用时: 0.31秒，退出状态: 0
+2026-03-01 20:08:52,385 | INFO | ssh_mcp | 建立新连接: root@10.0.147.10:22
+2026-03-01 20:08:52,385 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 20:08:52,419 | ERROR | ssh_mcp | SSH连接失败: No authentication methods available
+2026-03-01 20:23:52,776 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 20:23:52,776 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 20:23:52,918 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 20:23:52,918 | INFO | ssh_mcp | 执行命令: tail -n 20 '/var/log/nginx/access.log'
+2026-03-01 20:23:53,255 | INFO | ssh_mcp | 命令执行完成，用时: 0.34秒，退出状态: 0
+2026-03-01 20:23:53,257 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22
+2026-03-01 20:25:36,742 | INFO | ssh_mcp | 建立新连接: readuser@10.0.147.10:22
+2026-03-01 20:25:36,743 | INFO | ssh_mcp | 使用密码认证
+2026-03-01 20:25:36,845 | INFO | ssh_mcp | 连接成功: readuser@10.0.147.10:22
+2026-03-01 20:25:36,846 | INFO | ssh_mcp | 执行命令: tail -n 20 '/var/log/zabbix/zabbix_server.log'
+2026-03-01 20:25:37,152 | INFO | ssh_mcp | 命令执行完成，用时: 0.31秒，退出状态: 0
+2026-03-01 20:25:37,154 | INFO | ssh_mcp | 连接已关闭: readuser@10.0.147.10:22

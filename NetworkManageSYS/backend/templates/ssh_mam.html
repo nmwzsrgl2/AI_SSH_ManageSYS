@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiOps 运维管理平台</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <script src="{{ url_for('static', filename='js/xterm-addon-fit.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/socket.io.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/xterm.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/markdown-it.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/xterm.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aichat-style.css') }}">
+</head>
+<style>
+    .xterm-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .xterm-viewport {
+        scrollbar-width: none;
+    }
+</style>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="header">
+        <h1> AiOps 运维管理平台</h1>
+        <div class="header-links-div">
+            <a href="/" class="header_link">首页</a>
+            <a href="/inspection" class="header_link">自动巡检</a>
+            <a href="/ssh_mam" class="header_link">SSH连接</a>
+        </div>
+        <div class="header-actions">
+            <!-- 登录状态下显示的按钮 -->
+            <div class="user-actions" id="userActions" style="display: none;">
+                <span class="welcome-text">欢迎，<span id="currentUsername"></span></span>
+                <button class="btn btn-primary" onclick="showNewConnectionModal()">+ 新建连接</button>
+                <button class="btn btn-outline" onclick="toggleSidebar()" id="toggleSidebarBtn"> 连接列表</button>
+                <button class="btn btn-outline" onclick="AISidebar()" id="AISidebarBtn">关闭智能助手</button>
+                <button class="btn btn-secondary" onclick="logout()">退出登录</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="main-container">
+        <!-- 左侧连接列表栏 -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>SSH 连接</h3>
+            </div>
+            <div class="connections-list" id="connectionsList">
+                <div class="empty-connections">
+                    <div class="icon">📁</div>
+                    <p>暂无SSH连接</p>
+                    <p>点击"新建连接"创建第一个SSH连接</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中间终端区域 -->
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-title" id="terminalTitle">SSH 终端</div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div class="connection-status status-disconnected" id="connectionStatus">未连接</div>
+                    <button class="btn btn-danger hidden" onclick="disconnect()" id="disconnectBtn">断开连接</button>
+                </div>
+            </div>
+            <div class="terminal-content">
+                <div id="terminal"></div>
+            </div>
+        </div>
+        <!-- 中间拖拽 -->
+        <div id="dragHandle" class="drag-handle"></div>
+        <!-- 右边AI助手区域 -->
+        <div class="AI-chat" id = "chat">
+            <div class="ai-chat-header">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h1> AI 智能助手 </h1>
+                    <div class="model-selector">
+                    <button id="GetChathistory" class="btn-clear" onclick="GetChatHistory()">
+                        <i>获取历史对话</i>
+                    </button>
+                    <button id="clearChat" class="btn-clear">
+                        <i>清空对话</i>
+                    </button>
+                    </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages">
+                    <!-- 消息会动态添加到这里 -->
+                    </div>
+
+                    <div class="chat-input-area">
+                    <div class="input-container">
+                    <textarea id="messageInput" placeholder =" 输入您的问题..." lang ="3"></textarea>
+                    <div class="input-controls">
+                    <button type="button" id="sshcommedButton" class="btn-ssh">SSH上下文 ON</button>
+                    <button id="stopButton" class="btn-stop">
+                    停止
+                    </button>
+                    <button id="sendButton" class="btn-send">
+                    发送
+                    </button>
+                    </div>
+                    </div>
+                    <div class="input-hints">
+                    按 Enter 发送，Shift+Enter 换行
+                    <span id="tokenCount"> 字符数: 0</span>
+                    </div>
+                    </div>
+                    </div>               
+            </div>
+        </div>
+    </div>
+
+    <!-- 新建连接模态框 -->
+    <div class="modal" id="newConnectionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>新建SSH连接</h3>
+                <button class="close-btn" onclick="hideNewConnectionModal()">&times;</button>
+            </div>
+            <form id="connectionForm">
+                <div class="form-group full-width">
+                    <label><span class="required">*</span> 连接名称</label>
+                    <input type="text" id="connectionName" placeholder="为这个连接起个名字" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><span class="required">*</span> 主机地址</label>
+                        <input type="text" id="host" placeholder="IP地址或域名，例如：192.168.1.100" required>
+                        <div class="input-error" id="hostError">请输入主机地址</div>
+                    </div>
+                    <div class="form-group port-group">
+                        <label><span class="required">*</span> 端口</label>
+                        <div class="port-input-container">
+                            <button type="button" class="port-btn" onclick="adjustPort(-1)">−</button>
+                            <input type="number" id="port" value="22" min="1" max="65535" required>
+                            <button type="button" class="port-btn" onclick="adjustPort(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><span class="required">*</span> 用户名</label>
+                    <input type="text" id="username" value="admin" required>
+                </div>
+
+                <div class="form-group">
+                    <label>认证方式</label>
+                    <div class="auth-options">
+                        <label class="radio-option">
+                            <input type="radio" name="authMethod" value="password" checked onchange="toggleAuthMethod()">
+                            <span class="radio-custom"></span>
+                            <span>密码认证</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="authMethod" value="key" onchange="toggleAuthMethod()">
+                            <span class="radio-custom"></span>
+                            <span>私钥认证</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="passwordAuth" class="auth-method">
+                    <div class="form-group">
+                        <label>密码</label>
+                        <div class="password-input-container">
+                            <input type="password" id="password" placeholder="SSH密码">
+                            <button type="button" class="password-toggle" onclick="togglePasswordVisibility()">
+                                <span class="eye-icon">👁</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="keyAuth" class="auth-method hidden">
+                    <div class="form-group">
+                        <label>私钥内容</label>
+                        <textarea id="privateKey" placeholder="粘贴私钥内容..."></textarea>
+                    </div>
+                </div>
+
+                <div class="security-notice">
+                    <div class="notice-icon">ℹ️</div>
+                    <div class="notice-text">
+                        密码和私钥将使用加密算法安全存储，请确保只在受信任的环境中使用。
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="hideNewConnectionModal()">取消</button>
+                    <button type="button" class="btn btn-test" onclick="testConnection()">测试连接</button>
+                    <button type="button" class="btn btn-success" onclick="connectDirect()">直接连接</button>
+                    <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aichat.js') }}"></script>
+    <script>
+        class ResizablePanel {
+            constructor(options) {
+                this.container = options.container;
+                this.leftPanel = options.leftPanel;
+                this.rightPanel = options.rightPanel;
+                this.dragHandle = options.dragHandle;
+                this.minWidth = options.minWidth || 100;
+                this.maxWidth = options.maxWidth || 800;
+                this.widthDisplay = options.widthDisplay;
+                
+                this.isResizing = false;
+                this.startX = 0;
+                this.startWidth = 0;
+                
+                this.init();
+            }
+            
+            init() {
+                // 绑定事件
+                this.dragHandle.addEventListener('mousedown', this.startResize.bind(this));
+                document.addEventListener('mousemove', this.resize.bind(this));
+                document.addEventListener('mouseup', this.stopResize.bind(this));
+                
+                // 防止文本选中
+                this.dragHandle.addEventListener('dragstart', (e) => e.preventDefault());
+                
+                this.updateWidthDisplay();
+            }
+            
+            startResize(e) {
+                this.isResizing = true;
+                this.startX = e.clientX;
+                this.startWidth = this.leftPanel.offsetWidth;
+                
+                // 添加禁用选中样式
+                document.body.style.userSelect = 'none';
+                document.body.style.cursor = 'col-resize';
+                
+                e.preventDefault();
+            }
+            resize(e) {
+                if (!this.isResizing) return;
+                
+                const deltaX = e.clientX - this.startX;
+                let newWidth = this.startWidth - deltaX;
+                
+                // 限制宽度范围
+                newWidth = Math.max(this.minWidth, Math.min(newWidth, this.maxWidth));
+                
+                // 应用新宽度
+                this.leftPanel.style.width = `${newWidth}px`;
+                
+                // 更新手柄位置
+                this.dragHandle.style.left = `${newWidth}px`;
+            
+                this.updateWidthDisplay();
+            }
+            
+            stopResize() {
+                if (!this.isResizing) return;
+                this.isResizing = false;
+                
+                // 恢复样式
+                document.body.style.userSelect = '';
+                document.body.style.cursor = '';
+            }
+            
+            updateWidthDisplay() {
+                if (this.widthDisplay) {
+                    this.widthDisplay.textContent = `${this.leftPanel.offsetWidth}px`;
+                }
+            }
+        }
+        
+        // 初始化
+        const resizable = new ResizablePanel({
+            container: document.querySelector('.main-container'),
+            leftPanel: document.querySelector('.AI-chat'),
+            rightPanel: document.querySelector('.terminal-container'),
+            dragHandle: document.getElementById('dragHandle'),
+            minWidth: 100,
+            maxWidth: window.innerWidth * 0.8,
+        });
+        
+        // 窗口大小变化时更新最大宽度
+        document.addEventListener('resize', () => {
+            resizable.maxWidth = window.innerWidth * 0.8;
+        });
+    </script>
+</body>
+
+</html>

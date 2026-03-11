@@ -1,0 +1,22 @@
+2026-03-01 18:02:08,184 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 18:04:33,601 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 18:29:48,812 | ERROR | mcp_tool | 读取文件时出错: SSH连接失败: No authentication methods available
+2026-03-01 18:35:48,780 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 18:36:43,915 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 19:28:53,825 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 19:36:13,020 | INFO | mcp_tool | 文件创建成功: /tmp/zabbix_log_analysis.sh
+2026-03-01 19:39:36,606 | INFO | mcp_tool | 命令执行完成: find / -name "zabbix_server.log" 2>/dev/null
+2026-03-01 19:48:05,627 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 19:49:21,751 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 19:50:04,520 | INFO | mcp_tool | 文件创建成功: /tmp/zabbix_log_analysis
+2026-03-01 19:50:15,349 | ERROR | mcp_tool | 读取文件时出错: SSH连接失败: No authentication methods available
+2026-03-01 19:52:40,284 | INFO | mcp_tool | 文件创建成功: /tmp/test_connect.log
+2026-03-01 19:52:47,137 | ERROR | mcp_tool | 读取文件时出错: SSH认证失败: 用户名或密码/密钥错误
+2026-03-01 19:56:20,299 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 19:59:30,073 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 19:59:45,209 | ERROR | mcp_tool | 读取文件时出错: SSH连接失败: No authentication methods available
+2026-03-01 20:00:44,324 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log
+2026-03-01 20:02:07,063 | INFO | mcp_tool | 文件读取成功: /var/log/nginx/access.log
+2026-03-01 20:08:52,419 | ERROR | mcp_tool | 读取文件时出错: SSH连接失败: No authentication methods available
+2026-03-01 20:23:53,256 | INFO | mcp_tool | 文件读取成功: /var/log/nginx/access.log
+2026-03-01 20:25:37,153 | INFO | mcp_tool | 文件读取成功: /var/log/zabbix/zabbix_server.log

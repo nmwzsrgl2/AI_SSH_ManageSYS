@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>系统登录</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: url(../static/images/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            width: 360px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .login-container h2 {
+            margin: 0 0 25px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #5b7cfa;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #5b7cfa;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .login-btn:hover {
+            background: #4663d9;
+        }
+
+        .error-msg {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #d93025;
+            text-align: center;
+            display: none;
+        }
+
+        .footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+        .link{
+            margin-bottom: 10px;
+        }
+        .link > a {
+            font-size: 13px;
+            color: #5b7cfa;
+            text-decoration: none;
+        }
+        .foot_font{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>系统登录</h2>
+    <form id="loginForm">
+        <div class="form-group">
+            <label><span class="required">*</span> 用户名或邮箱</label>
+            <input type="text" id="loginUsername" placeholder="输入用户名或邮箱" autofocus required>
+        </div>
+
+        <div class="form-group">
+            <label><span class="required">*</span> 密码</label>
+            <div class="password-input-container">
+                <input type="password" id="loginPassword" placeholder="输入密码" required>
+                <button type="button" class="password-toggle" >
+                    <span class="eye-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary login-btn" onclick="handleLogin(event)">登录</button>
+        </div>
+
+        <div class="form-footer">
+            <p>还没有账户？<a href="javascript:void(0)" onclick="switchToRegister()">立即注册</a></p>
+        </div>
+    </form>
+
+    <div class="error-msg" id="errorMsg">用户名或密码不能为空</div>
+
+    <div class="footer">
+        <span class="foot_font">© 2026 AiOps 运维管理平台</span>
+    </div>
+
+
+
+    <!-- 注册模态框 -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>用户注册</h3>
+                <button class="close-btn" onclick="hideRegisterModal()">&times;</button>
+            </div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label><span class="required">*</span> 用户名</label>
+                    <input type="text" id="registerUsername" placeholder="输入用户名（至少3个字符）" required>
+                    <div class="input-hint">用户名只能包含字母、数字和下划线</div>
+                </div>
+
+                <div class="form-group">
+                    <label><span class="required">*</span> 邮箱</label>
+                    <input type="email" id="registerEmail" placeholder="输入邮箱地址" required>
+                </div>
+
+                <div class="form-group">
+                    <label><span class="required">*</span> 密码</label>
+                    <div class="password-input-container">
+                        <input type="password" id="registerPassword" placeholder="输入密码（至少6个字符）" required>
+                    </div>
+                    <div class="input-hint">密码至少需要6个字符</div>
+                </div>
+
+                <div class="form-group">
+                    <label><span class="required">*</span> 确认密码</label>
+                    <div class="password-input-container">
+                        <input type="password" id="confirmPassword" placeholder="再次输入密码" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="hideRegisterModal()">取消</button>
+                    <button type="submit" class="btn btn-primary" onclick="handleRegister(event)">注册</button>
+                </div>
+
+                <div class="form-footer">
+                    <p>已有账户？<a href="javascript:void(0)" onclick="switchToLogin()">立即登录</a></p>
+                </div>
+            </form>
+        </div>
+</div>
+
+<script>
+
+// 处理用户登录
+async function handleLogin(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('loginUsername').value.trim();
+    const password = document.getElementById('loginPassword').value;
+    
+    if (!username || !password) {
+        alert('请输入用户名和密码');
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        });
+        
+        const data = await response.json();
+        
+        if (response.status === 200) {
+            isAuthenticated = true;
+            currentUser = data.user;
+            // 重定向到用户主页
+            window.location.href = '/';
+        } 
+        else {
+            alert('登录失败: ' + data.error);
+        }
+    } catch (error) {
+        console.error('登录请求失败:', error);
+        alert('登录失败，请稍后重试');
+    }
+}
+
+// 处理用户注册
+async function handleRegister(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('registerUsername').value.trim();
+    const email = document.getElementById('registerEmail').value.trim();
+    const password = document.getElementById('registerPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    
+    // 客户端验证
+    if (!username || !email || !password || !confirmPassword) {
+        alert('请填写所有必填字段');
+        return;
+    }
+    
+    if (username.length < 3) {
+        alert('用户名至少需要3个字符');
+        return;
+    }
+    
+    if (password.length < 6) {
+        alert('密码至少需要6个字符');
+        return;
+    }
+    
+    if (password !== confirmPassword) {
+        alert('两次输入的密码不一致');
+        return;
+    }
+    
+    // 简单的邮箱验证
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('请输入有效的邮箱地址');
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, email, password })
+        });
+        
+        const data = await response.json();
+        
+        if (response.status === 200) {
+            isAuthenticated = true;
+            currentUser = data.user;
+            // showUserInterface();
+            // hideRegisterModal();
+            // 重新初始化
+            hideRegisterModal();
+        } else {
+            alert('注册失败: ' + data.error);
+        }
+    } catch (error) {
+        console.error('注册请求失败:', error);
+        alert('注册失败，请稍后重试');
+    }
+}
+
+
+
+// 显示注册模态框
+function showRegisterModal() {
+    document.getElementById('registerModal').classList.add('show');
+    document.getElementById('registerUsername').focus();
+}
+
+// 隐藏注册模态框
+function hideRegisterModal() {
+    document.getElementById('registerModal').classList.remove('show');
+    document.getElementById('registerForm').reset();
+}
+
+// 在登录和注册模态框之间切换
+function switchToRegister() {
+    showRegisterModal();
+}
+
+function switchToLogin() {
+    hideRegisterModal();
+}
+
+</script>
+</body>
+</html>
